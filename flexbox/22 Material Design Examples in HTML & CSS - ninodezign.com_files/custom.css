@@ -1,0 +1,126 @@
+/* 
+Add your custom styles in this file instead of style.css so it 
+is easier to update the theme. Simply copy an existing style 
+from style.css to this file, and modify it to your liking. 
+
+When you update your theme, backup this file and re-add it after.
+*/
+.content-center {
+	text-align: center;
+}
+.adv-left {
+	float: left;
+	margin: 0 10px 10px 0;
+}
+.clear {
+	clear: both;
+}
+.nd-ourFriends li a {
+	display: block;
+	color: #b9b9b9;
+	padding: 10px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+	background: #212121;
+}
+.nd-ourFriends li a:hover {
+	color: #fff;
+}
+.nd-ourFriends li img {
+	width: 16px;
+	margin-right: 8px;
+	position: relative;
+	top: 2px;
+}
+#header .pad {
+	text-align: center;
+}
+.adv-header,
+.site-title {
+	float: none;
+	display: inline-block;
+	margin: 0 10px;
+}
+
+.tm-widget-wrapper .tm-widget.col-1.has-logo .tm-widget-content,
+.tm-widget-content {
+     	margin: 0 !important;
+}
+
+/* Global */
+.pad {padding: 10px 25px 20px;}
+[class*="nd-button-"] {
+	padding: 10px 20px;
+	color: #fff;
+	margin: 0 5px;
+}
+[class*="nd-button-"] a {
+	color: #fff;
+}
+.nd-button-demo {
+	background: #82b965;
+}
+.nd-button-download {
+	background: #3b8dbd;
+}
+
+#email-subscribers-2 #es_txt_email,
+#mc_signup_form #mc_mv_EMAIL {
+	border: 2px solid #ddd;
+	line-height: 20px;
+	padding: 7px 8px;
+	font-size: 14px;
+}
+#email-subscribers-2 .es_button,
+#mc_signup_form #mc_signup_submit {
+	margin: 0;
+	padding: 0;
+}
+#email-subscribers-2 #es_txt_button,
+#mc_signup_form #mc_signup_submit {
+	background: #FEA413;
+	border: none;
+	color: #fff;
+	padding: 8px 20px;
+	cursor: pointer;
+	font-size: 15px;
+}
+#email-subscribers-2 #es_txt_button:hover,
+#mc_signup_form #mc_signup_submit:hover {
+	background: #f89e0d;
+}
+#mc_signup_form #mc_subheader {
+	line-height: inherit;
+}
+.nino-ads-1 {margin: 10px 0 0;}
+
+#tt-widget ul.tt-themes li {box-sizing: border-box;}
+
+.shareaholic-share-buttons-container li.shareaholic-total-count {top: -20px !important;}
+
+#footer-widgets .pad {
+    padding: 20px 0 0;
+    text-align: center;
+}
+#footer .widget {
+    padding-bottom: 5px;
+}
+#footer-widgets {
+    padding-top: 5px;
+}
+
+/* Tablet - 800px, 768px & 720px */
+@media only screen and (min-width: 720px) and (max-width: 800px) {
+	.mystyle {}
+}
+
+
+/* Mobile - 480px & 320px */
+@media only screen and (max-width: 719px) {
+	.mystyle {}
+}
+
+
+/* Mobile - 320px */
+@media only screen and (max-width: 479px) {
+	.mystyle {}
+}
