@@ -12,5 +12,13 @@ mongodb.MongoClient.connect(dburl, function(err, db){
       res.json({ games } );
     });
   });
+
+  app.use((req, res) => {
+    res.status(404).json({
+      errors: {
+        global: "Still working on it. Please try again later when we implement it,"
+      }
+    })
+  })
 });
 
