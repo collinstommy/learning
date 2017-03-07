@@ -1,14 +1,23 @@
 import React from 'react';
 import classnames from 'classnames';
-import { connect } from 'react-redux';
-import { saveGame } from '../actions';
+
 
 class GamesForm extends React.Component {
   state = {
-    title: '',
-    cover: '',
+    _id: this.props.game ? this.props.game._id : null,
+    title: this.props.game ? this.props.game.title : '',
+    cover: this.props.game ? this.props.game.cover : '',
     errors: {},
-    loading: false
+    loading: false,
+  }
+
+
+  componentWillReceiveProps = (nextProps) => {
+    this.setState({
+      _id: nextProps.game._id,
+      title: nextProps.game.title,
+      cover: nextProps.game.cover
+    })
   }
 
   handleChange = (e) => {
@@ -35,18 +44,20 @@ class GamesForm extends React.Component {
     const isValid = Object.keys(errors).length === 0;
 
     if (isValid) {
-      const { title, cover } = this.state;
+      const { title, cover, _id } = this.state;
       this.setState({ loading: true });
-      this.props.saveGame({ title, cover }).then(
-        () => { },
-        (err) => err.response.json().then(
-          ({errors}) => this.setState({ errors, loading: false }))
-      );
+      this.props.saveGame({_id, title, cover})
+      .catch((err) => err.response.json()
+        .then(({errors}) => this.setState({ errors, loading: false })))
     }
   }
 
+  handleError = (err) => {
+    console.log(err);
+  }
+
   render() {
-    return (
+    const form = (
       <form className={classnames('ui', 'form',
         { loading: this.state.loading })} onSubmit={this.handleSubmit}>
         <h1>add new Game</h1>
@@ -76,8 +87,13 @@ class GamesForm extends React.Component {
           <button className="ui primary button">Save</button>
         </div>
       </form>
+    );
+    return (
+      <div>
+        { form }
+      </div>
     )
   }
 }
 
-export default connect(null, { saveGame })(GamesForm);
+export default GamesForm;

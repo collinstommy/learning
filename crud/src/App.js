@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import  { Link, Route, NavLink } from 'react-router-dom';
 import GamesPage from './Components/GamesPage';
-import GamesForm from './Components/GamesForm';
+import GamesFormPage from "./Components/GamesformPage";
 import './App.css';
 
 
@@ -17,7 +17,8 @@ class App extends Component {
          </div>
 
          <Route exact path="/games" component={GamesPage} />
-         <Route exact path="/games/new" component={GamesForm} />
+         <Route path="/games/new" component={GamesFormPage} />
+         <Route path="/game/:_id" component={GamesFormPage} />
       </div>
     );
   }
