@@ -1,0 +1,4 @@
+object-fit => cover/fill, clips overflow, can use on videos
+linear gradient => create skewed background (section-book, _home)
+
+valid and invalid pseudo classes
